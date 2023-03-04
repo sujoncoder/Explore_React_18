@@ -1,9 +1,15 @@
-import React from "react"
+import React, { useState } from "react"
+import First from "./components/First"
+import Second from "./components/Second"
 
 function App() {
+const [count, setCount] = useState(0)
+const handleCounter = () => setCount(count+1);
+
   return (
     <div>
-      <h1>Hello Sujon Sheikh.</h1>
+      <First count={count} handleCounter={handleCounter}/>
+      <Second count={count} handleCounter={handleCounter}/>
     </div>
   )
 }
